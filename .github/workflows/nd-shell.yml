@@ -15,7 +15,7 @@ env:
 
 jobs:
   shellbot:
-    runs-on: macos-latest
+    runs-on: ubuntu-20.04
 
     steps:
       - name: Checkout
@@ -28,6 +28,11 @@ jobs:
           git config --global color.ui true
           git config --global credential.helper store
           echo "https://${GitHubName}:${{ secrets.GH_TOKEN }}@github.com" > ~/.git-credentials
+
+      - name: Re-install nodejs and npm
+        run: |
+          curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+          sudo apt-get -qq -y install nodejs
 
       - name: Clone botgram shell-bot repo and Generate config
         run: |
