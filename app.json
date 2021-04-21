@@ -1,0 +1,25 @@
+{
+  "name": "Telegram Shell Bot",
+  "description": "A shell bot for telegram with tons of features",
+  "logo": "https://camo.githubusercontent.com/3afed833fa565a8932ae3a4ecccc48e54d1e35d039d5b8c93c3502dd9453e9cc/687474703a2f2f692e696d6775722e636f6d2f6a386158464c642e706e67",
+  "keywords": [
+    "telegram",
+    "plugin",
+    "modular",
+    "productivity"
+  ],
+  "repository": "https://github.com/SuperCosmicBeing/shellbot-workflow-nd",
+  "website": "https://t.me/SuperCosmicBeing",
+  "success_url": "https://t.me/FrosT2k5",
+  "stack": "container",
+  "env": {
+    "BOTTOKEN": {
+      "description": "Telegram Bot token, get it from https://t.me/botfather",
+      "required": true
+    },
+    "OWNERID": {
+      "description": "Telegram user id of owner",
+      "required": true
+    }
+  }
+}
