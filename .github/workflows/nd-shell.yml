@@ -12,6 +12,7 @@ env:
   # GH_TOKEN >> Github Personal Access Token << In Repository Secrets
   # authToken >> Telegram Bot Token << In Repository Secrets
   # ownerID >> Telegram User/Admin owner ID << In Repository Secrets
+  # Check last line if you want to enable looper
 
 jobs:
   shellbot:
@@ -64,4 +65,5 @@ jobs:
           echo $(( RANDOM - ( RANDOM % RANDOM ) )) > looper.txt
           git add looper.txt
           git commit -m "Looping at $(date -u +%D-%T%P)"
-          git push -q https://github.com/${GITHUB_REPOSITORY} HEAD:main
+          #git push -q https://github.com/${GITHUB_REPOSITORY} HEAD:main
+          #Uncomment the above line to enable looper(not recommended)
