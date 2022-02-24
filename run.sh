@@ -6,5 +6,4 @@ cat << EOF > config.json
 }
 EOF
 
-pwd
 node server
