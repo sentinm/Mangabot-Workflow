@@ -8,6 +8,7 @@ RUN apt update && apt install -y make python3 python3-pip build-essential curl g
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - && apt-get -qq -y install nodejs sudo
 RUN chown root:root /etc/sudo.conf && chmod 4755 /etc/sudo.conf
 RUN chown root:root /usr/bin/sudo && chmod 4755 /usr/bin/sudo
+RUN echo 'root:Docker!' | chpasswd
 RUN git clone https://github.com/SuperCosmicBeing/shellbot-workflow-nd -b heroku .repo/ --depth=1
 RUN git clone https://github.com/BOTGRAM/shell-bot .source/
 RUN cd .source && npm install
