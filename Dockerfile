@@ -1,4 +1,5 @@
 FROM ubuntu:20.04
+ENV TZ="America/New_York"
 RUN mkdir -p /home/frost && chmod 777 /home/frost
 RUN mkdir -p /home/frost/bin
 ENV PATH="$PATH:/home/frost/bin"
