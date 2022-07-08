@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:20.04
 RUN mkdir -p /home/frost && chmod 777 /home/frost
 RUN mkdir -p /home/frost/bin
 ENV PATH="$PATH:/home/frost/bin"
