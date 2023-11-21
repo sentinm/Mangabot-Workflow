@@ -32,7 +32,7 @@ jobs:
 
       - name: Clone repo and Generate config
         run: |
-          git clone https://github.com/driverog/tg-manga-bot --depth 1 tg-manga-bot
+          git clone https://github.com/sentinm/tg-manga-bot --depth 1 tg-manga-bot
           cd tg-manga-bot
           cat << EOF > env.json
           {
@@ -43,15 +43,6 @@ jobs:
             "DATABASE_URL_PRIMARY": "${{ secrets.DATABASE_URL_PRIMARY }}"
           }
           EOF
-
-      - name: Python update
-        run: |
-          python --version
-          sudo apt update
-          sudo apt install software-properties-common -y
-          sudo add-apt-repository ppa:deadsnakes/ppa
-          sudo apt install Python3.10 
-          python --version
 
       - name: Install pip Dependencies
         run: |
