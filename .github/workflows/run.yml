@@ -32,7 +32,7 @@ jobs:
 
       - name: Clone repo and Generate config
         run: |
-          git clone https://github.com/diverog/tg-manga-bot --depth 1 tg-manga-bot
+          git clone https://github.com/driverog/tg-manga-bot --depth 1 tg-manga-bot
           cd tg-manga-bot
           cat << EOF > env.json
           {
