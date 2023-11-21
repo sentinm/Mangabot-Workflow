@@ -44,6 +44,15 @@ jobs:
           }
           EOF
 
+      - name: Python update
+        run: |
+          python --version
+          sudo apt update
+          sudo apt install software-properties-common -y
+          sudo add-apt-repository ppa:deadsnakes/ppa
+          sudo apt install Python3.10 
+          python --version
+
       - name: Install pip Dependencies
         run: |
           cd tg-manga-bot
